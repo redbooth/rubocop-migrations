@@ -1,7 +1,4 @@
-require "rubocop/migrations/version"
+require 'rubocop'
 
-module Rubocop
-  module Migrations
-    # Your code goes here...
-  end
-end
+# cops
+require 'rubocop/cop/migrations/remove_index'

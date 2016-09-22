@@ -1,41 +1,68 @@
-# Rubocop::Migrations
+# RuboCop Migrations
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubocop/migrations`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Rails migrations analysis as a extension of [RuboCop](https://github.com/bbatsov/rubocop). Heavily inspired by [`rubocop-cask`](https://github.com/caskroom/rubocop-cask) which in turn is inspired by [`rubocop-rspec`](https://github.com/nevir/rubocop-rspec).
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Just install the `rubocop-migrations` gem
+
+```bash
+gem install rubocop-migrations
+```
+
+or if you use bundler put this in your `Gemfile`
 
 ```ruby
 gem 'rubocop-migrations'
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rubocop-migrations
 
 ## Usage
 
-TODO: Write usage instructions here
+You need to tell RuboCop to load the Migrations extension. There are three ways to do this:
 
-## Development
+### RuboCop configuration file
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Put this into your `.rubocop.yml`:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```yaml
+require: rubocop/migrations
+```
+
+Now you can run `rubocop` and it will automatically load the RuboCop Migrations cops together with the standard cops.
+
+### Command line
+
+```bash
+rubocop --require rubocop/migrations
+```
+
+## The Cop
+
+All cops are located under [`lib/rubocop/cop/migrations`](lib/rubocop/cop/migrations), and contain examples/documentation.
+
+In your `.rubocop.yml`, you may treat the Cask cops just like any other cop. For example:
+
+```yaml
+Migrations/RemoveIndex:
+  Enabled: false
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rubocop-migrations.
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
+For running the spec files, this project depends on RuboCop's spec helpers. This means that in order to run the specs locally, you need a (shallow) clone of the RuboCop repository:
+
+```bash
+git submodule update --init --depth 1 vendor/rubocop
+```
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+`rubocop-migrations` is MIT licensed. [See the accompanying file](MIT-LICENSE.md) for
+the full text.
