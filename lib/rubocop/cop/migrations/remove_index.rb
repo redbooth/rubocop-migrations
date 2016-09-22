@@ -4,7 +4,7 @@ module RuboCop
       # Removing indexes is dangerous by nature, if the index you remove
       # is used extensively, you could end up with database degradation.
       #
-      # This disallow the use of remove_index at all when. It only allows it
+      # This disallow the use of remove_index at all. It is only allowed
       # inside a down method definition. If you actually know what you are doing
       # (usually when the index is not being used) you should explicitly disable
       # the check by adding a ``rubocop:disable Migrations/RemoveIndex`` comment
