@@ -12,9 +12,7 @@ module RuboCop
       class RemoveIndex < Cop
         MSG = 'remove_index is disalowed'.freeze
 
-        def_node_matcher :remove_index_found, <<-PATTERN
-           (:send _ :remove_index ...)
-        PATTERN
+        def_node_matcher :remove_index_found, '(:send _ :remove_index ...)'
 
         def on_send(node)
           remove_index_found(node) do
