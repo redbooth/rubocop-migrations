@@ -20,7 +20,7 @@ module RuboCop
           remove_index_found(node) do
             node.each_ancestor do |a|
               next unless a.def_type?
-              if a.source =~ /def up/ || a.source =~ /def change/
+              if a.to_s =~ /def :up/ || a.to_s =~ /def :change/
                 add_offense(node, :selector, MSG)
               end
             end
