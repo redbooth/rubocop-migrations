@@ -18,7 +18,7 @@ describe RuboCop::Cop::Migrations::RemoveIndex do
       let(:expected_offenses) do
         [
           {
-            message: 'remove_index is disalowed',
+            message: 'remove_index is disallowed',
             severity: :convention,
             line: 3,
             column: 14,
@@ -44,7 +44,7 @@ describe RuboCop::Cop::Migrations::RemoveIndex do
         let(:expected_offenses) do
           [
             {
-              message: 'remove_index is disalowed',
+              message: 'remove_index is disallowed',
               severity: :convention,
               line: 4,
               column: 18,
@@ -70,7 +70,7 @@ describe RuboCop::Cop::Migrations::RemoveIndex do
       let(:expected_offenses) do
         [
           {
-            message: 'remove_index is disalowed',
+            message: 'remove_index is disallowed',
             severity: :convention,
             line: 3,
             column: 14,

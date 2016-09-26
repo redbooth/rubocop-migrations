@@ -10,7 +10,7 @@ module RuboCop
       # the check by adding a ``rubocop:disable Migrations/RemoveIndex`` comment
       # in the offending line
       class RemoveIndex < Cop
-        MSG = 'remove_index is disalowed'.freeze
+        MSG = 'remove_index is disallowed'.freeze
 
         def_node_matcher :remove_index_found, '(:send _ :remove_index ...)'
 
