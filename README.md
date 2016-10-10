@@ -9,7 +9,7 @@ inspired by [`rubocop-rspec`](https://github.com/nevir/rubocop-rspec).
 
 Just install the `rubocop-migrations` gem
 
-```bash
+```shell
 gem install rubocop-migrations
 ```
 
@@ -38,7 +38,7 @@ cops together with the standard cops.
 
 ### Command line
 
-```bash
+```shell
 rubocop --require rubocop/migrations
 ```
 
@@ -63,6 +63,24 @@ Migrations/RemoveIndex:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+### Running the tests
+
+We use Appraisals in order to run the tests with different rubocop versions to
+ensure compatibility. 
+
+To run the specs with all supported rubocop versions first install the required
+dependencies with:
+
+```shell
+bundle exec appraisals install
+```
+
+Then run the specs by just running `rake` it will run specs with all the
+versions.
+
+For more info just check the appraisals documentation
+https://github.com/thoughtbot/appraisal
 
 ## License
 
