@@ -64,14 +64,6 @@ Migrations/RemoveIndex:
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-For running the spec files, this project depends on RuboCop's spec helpers. This
-means that in order to run the specs locally, you need a (shallow) clone of the
-RuboCop repository:
-
-```bash
-git submodule update --init --depth 1 vendor/rubocop
-```
-
 ## License
 
 `rubocop-migrations` is MIT
