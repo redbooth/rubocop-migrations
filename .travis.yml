@@ -2,3 +2,8 @@ language: ruby
 rvm:
   - 2.3.0
 before_install: gem install bundler -v 1.11.2
+gemfile:
+  - gemfiles/rubocop_0.41.gemfile
+  - gemfiles/rubocop_0.42.gemfile
+  - gemfiles/rubocop_0.43.gemfile
+  - gemfiles/latest_rubocop.gemfile
