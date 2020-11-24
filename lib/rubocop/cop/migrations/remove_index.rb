@@ -19,7 +19,7 @@ module RuboCop
             node.each_ancestor do |a|
               next unless a.def_type?
               if a.to_s =~ /def :up/ || a.to_s =~ /def :change/
-                add_offense(node, :selector, MSG)
+                add_offense(node, location: :selector, message: MSG)
               end
             end
           end
