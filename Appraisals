@@ -1,13 +1,17 @@
-appraise 'rubocop-0.41' do
-  gem 'rubocop', '~> 0.41.0'
+appraise 'rubocop-1.0' do
+  gem 'rubocop', '~> 1.0.0'
 end
 
-appraise 'rubocop-0.42' do
-  gem 'rubocop', '~> 0.42.0'
+appraise 'rubocop-1.1' do
+  gem 'rubocop', '~> 1.1.0'
 end
 
-appraise 'rubocop-0.43' do
-  gem 'rubocop', '~> 0.43.0'
+appraise 'rubocop-1.2' do
+  gem 'rubocop', '~> 1.2.0'
+end
+
+appraise 'rubocop-1.3' do
+  gem 'rubocop', '~> 1.2.0'
 end
 
 appraise 'latest-rubocop' do
